@@ -58,8 +58,9 @@ class Calculator {
     }
 
     getDisplay(number) {
-        const integerDigits = parseFloat(number.split('.')[0]);
-        const decimalDigits = number.split('.')[1];
+        const stringNumber = number.toString();
+        const integerDigits = parseFloat(stringNumber.split('.')[0]);
+        const decimalDigits = stringNumber.split('.')[1];
         let integerDisplay;
 
         if (isNaN(integerDigits))
